@@ -1,6 +1,9 @@
 # Sentiment Analysis App
+This is a simple web app for Thai language sentiment analysis using **Streamlit** and **Transformers**.
 
-This is a simple web app for sentiment analysis using **Streamlit** and **Transformers**.
+## Deployment
+This app is deployed on Streamlit Community Cloud.
+🔗 [Live App](https://sentimentapp-xycipj33rxfs29tzjvjrma.streamlit.app)
 
 ## Features
 - Upload an Excel file
@@ -11,10 +14,7 @@ This is a simple web app for sentiment analysis using **Streamlit** and **Transf
 1. Install dependencies:
    ```bash
    pip install -r requirements.txt
-2.Run the app:
+   
+2. Run the app:
    ```bash
    streamlit run app.py
-## Deployment
-This app is deployed on Streamlit Community Cloud.
-
-🔗 [Live App](https://sentimentapp-xycipj33rxfs29tzjvjrma.streamlit.app)
