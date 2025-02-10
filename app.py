@@ -32,12 +32,12 @@ def main():
             
             st.write("Sentiment analysis completed! Preview of results:")
             st.dataframe(df.head())
+            st.write("Sentiment Distribution")
             # Visualize the sentiment column as a pie chart
             sentiment_counts = df['sentiment'].value_counts()
             fig, ax = plt.subplots()
             ax.pie(sentiment_counts, labels=sentiment_counts.index, autopct='%1.1f%%', startangle=90)
             ax.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
-            plt.title("Sentiment Distribution")  # Add a header to the pie chart
             st.pyplot(fig)
             
             output_file = "sentiment_output.xlsx"
