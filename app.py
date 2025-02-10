@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 from transformers import pipeline
+import matplotlib.pyplot as plt
 
 # Load the sentiment analysis pipeline
 sentiment_pipeline = pipeline("sentiment-analysis", model="Cincin-nvp/wisesight_sentiment_XLM-R")
