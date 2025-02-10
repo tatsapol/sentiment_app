@@ -36,8 +36,8 @@ def main():
 
             # Define colors for each sentiment value
             sentiment_colors = {
-                'Positive': '#BAFFC9',  # Light green
-                'Negative': '#FFB3BA',  # Light red
+                'Positive': '#55AD07',  # Light green
+                'Negative': '#FF5500',  # Light red
                 'Neutral': '#BAE1FF'    # Light yellow
             }
             
