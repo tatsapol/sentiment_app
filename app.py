@@ -4,7 +4,7 @@ from transformers import pipeline
 import matplotlib.pyplot as plt
 
 # Cache the sentiment analysis pipeline to load it only once
-@st.cache(allow_output_mutation=True)
+@st.cache_resource
 def load_sentiment_pipeline():
     return pipeline("sentiment-analysis", model="Cincin-nvp/wisesight_sentiment_XLM-R")
 
