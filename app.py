@@ -54,7 +54,6 @@ def main():
                 ax.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
                 st.pyplot(fig)
 
-                
                 # Add summary below the pie chart
                 st.write(f"**All comments:** {len(df)}")
                 st.write(f"**Positive comments:** {sentiment_counts.get('Positive', 0)}")
