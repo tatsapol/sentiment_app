@@ -19,7 +19,7 @@ def get_sentiment(text):
 
 # Streamlit app
 def main():
-    st.title("Sentiment Analysis App")
+    st.title("**Sentiment Analysis App**")
     st.write("Upload an Excel file and select a column for sentiment analysis.")
     
     uploaded_file = st.file_uploader("Upload Excel file", type=["xlsx"])
