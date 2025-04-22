@@ -13,9 +13,9 @@ sentiment_pipeline = load_sentiment_pipeline()
 def get_sentiment(text):
     if isinstance(text, str):  # Check if the input is a string
         result = sentiment_pipeline(text)
-        return result[0]['label']
+        return result[0]['label'], result[0]['score']
     else:
-        return None  # Default value for non-string inputs
+        return None, None  # Default values for non-string inputs
 
 # Streamlit app
 def main():
@@ -33,7 +33,7 @@ def main():
             column = st.selectbox("Select a column for sentiment analysis", df.columns)
             
             if st.button("Analyze Sentiment"):
-                df['sentiment'] = df[column].apply(get_sentiment)
+                df[['sentiment', 'confidence']] = df[column].apply(lambda x: pd.Series(get_sentiment(x)))
                 
                 st.write("Sentiment analysis completed! Preview of results:")
                 st.dataframe(df.head())
@@ -43,7 +43,7 @@ def main():
                 sentiment_colors = {
                     'Positive': '#63E66E',  # Light green
                     'Negative': '#FF7700',  # Light red
-                    'Neutral': '#BAE1FF'    # Light blue
+                    'Neutral': '#D3D3D3'    # Gray
                 }
                 
                 # Visualize the sentiment column as a pie chart with specific colors and a header
