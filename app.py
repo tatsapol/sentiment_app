@@ -49,7 +49,7 @@ def main():
                 # Visualize the sentiment column as a pie chart with specific colors and a header
                 sentiment_counts = df['sentiment'].value_counts()
                 colors = [sentiment_colors[label] for label in sentiment_counts.index]
-                fig, ax = plt.subplots()
+                fig, ax = plt.subplots(figsize=(6, 4))
                 ax.pie(sentiment_counts, labels=sentiment_counts.index, autopct='%1.1f%%', startangle=90, colors=colors)
                 ax.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
                 st.pyplot(fig)
