@@ -27,7 +27,7 @@ def main():
     if uploaded_file is not None:
         try:
             df = pd.read_excel(uploaded_file)
-            st.write("Preview of the uploaded file:")
+            st.write("**Preview of the uploaded file:**")
             st.dataframe(df.head())
             
             column = st.selectbox("Select a column for sentiment analysis", df.columns)
@@ -35,9 +35,9 @@ def main():
             if st.button("Analyze Sentiment"):
                 df[['sentiment', 'confidence']] = df[column].apply(lambda x: pd.Series(get_sentiment(x)))
                 
-                st.write("Sentiment analysis completed! Preview of results:")
+                st.write("**Sentiment analysis completed! Preview of results:**")
                 st.dataframe(df.head())
-                st.write("Sentiment Distribution:")
+                st.write("**Sentiment summary:**")
 
                 # Define colors for each sentiment value
                 sentiment_colors = {
