@@ -53,7 +53,14 @@ def main():
                 ax.pie(sentiment_counts, labels=sentiment_counts.index, autopct='%1.1f%%', startangle=90, colors=colors)
                 ax.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
                 st.pyplot(fig)
+
                 
+                # Add summary below the pie chart
+                st.write(f"**All comments:** {len(df)}")
+                st.write(f"**Positive comments:** {sentiment_counts.get('Positive', 0)}")
+                st.write(f"**Negative comments:** {sentiment_counts.get('Negative', 0)}")
+                st.write(f"**Neutral comments:** {sentiment_counts.get('Neutral', 0)}")
+
                 output_file = "sentiment_output.xlsx"
                 df.to_excel(output_file, index=False)
                 
