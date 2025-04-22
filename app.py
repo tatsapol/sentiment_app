@@ -43,7 +43,7 @@ def main():
                 sentiment_colors = {
                     'Positive': '#7defa1',  # Light green
                     'Negative': '#ff4b4b',  # Light red
-                    'Neutral': '#d7d7d7'    # Gray
+                    'Neutral': '#f0f2f6'    # Gray
                 }
                 
                 # Visualize the sentiment column as a pie chart with specific colors and a header
