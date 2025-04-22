@@ -55,10 +55,11 @@ def main():
                 st.pyplot(fig)
                 
                 # Add summary below the pie chart
-                st.write(f"All comments:{len(df)}")
-                st.write(f"Positive comments:{sentiment_counts.get('Positive', 0)}")
-                st.write(f"Negative comments:{sentiment_counts.get('Negative', 0)}")
-                st.write(f"Neutral comments:{sentiment_counts.get('Neutral', 0)}")
+                st.write(f"All comments: {len(df)}")
+                st.write(f"Positive comments: {sentiment_counts.get('Positive', 0)}")
+                st.write(f"Negative comments: {sentiment_counts.get('Negative', 0)}")
+                st.write(f"Neutral comments: {sentiment_counts.get('Neutral', 0)}")
+
 
                 output_file = "sentiment_output.xlsx"
                 df.to_excel(output_file, index=False)
